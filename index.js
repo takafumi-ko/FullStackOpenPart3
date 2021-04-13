@@ -4,26 +4,26 @@ const app = express()
 app.use(express.json())
 
 let persons = [
-            {
-                name: "Arto Hellas",
-                number: "040-123456",
-                id: 1
-            },
-            {
-                name: "Ada Lovelace",
-                number: "39-44-5323523",
-                id: 2
-            },
-            {
-                name: "Dan Abramov",
-                number: "12-43-234345",
-                id: 3
-            },
-            {
-                name: "Mary Poppendieck",
-                number: "39-23-6423122",
-                id: 4
-            }
+    {
+        name: "Arto Hellas",
+        number: "040-123456",
+        id: 1
+    },
+    {
+        name: "Ada Lovelace",
+        number: "39-44-5323523",
+        id: 2
+    },
+    {
+        name: "Dan Abramov",
+        number: "12-43-234345",
+        id: 3
+    },
+    {
+        name: "Mary Poppendieck",
+        number: "39-23-6423122",
+        id: 4
+    }
 ]
 
 app.get('/', (request, response) => {
@@ -57,21 +57,30 @@ app.get('/api/persons/:id', (request, response) => {
 app.post('/api/persons', (request, response) => {
     let person = request.body
 
-    person={...person,id :Math.random()}
+    if (!person.number || !person.name) {
+        response.json({error:"name or number must be not null"})
+    }
+
+    if (persons.find(p => p.name === person.name)) {
+        response.json({ error: 'name must be unique' })
+        response.status(400).end()
+    }
+
+    person = {...person, id: Math.random()}
     console.log(person)
     persons = persons.concat(person)
 
-    response.json(person)
+    response.json(person).status(201).end()
 })
 
-app.delete('/api/persons/:id',(request,response)=>{
+app.delete('/api/persons/:id', (request, response) => {
     const id = Number(request.params.id)
 
-    const newPersons = persons.filter(person=>person.id!==id)
+    const newPersons = persons.filter(person => person.id !== id)
     console.log(newPersons)
-    if (persons.length>newPersons.length) {
+    if (persons.length > newPersons.length) {
         persons = newPersons
-        response.status(200).end()
+        response.status(204).end()
     } else {
         response.status(404).end()
     }
