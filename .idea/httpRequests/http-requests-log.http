@@ -1,0 +1,46 @@
+GET http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+GET http://localhost:3001/api/persons/4
+
+<> 2021-04-14T010558.200.json
+
+###
+
+GET http://localhost:3001/api/persons/4
+
+<> 2021-04-14T010519.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+GET http://localhost:3001/api/persons/4
+
+<> 2021-04-14T010343.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
+DELETE http://localhost:3001/api/persons/4
+
+###
+
