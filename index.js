@@ -1,4 +1,5 @@
 const express = require('express')
+require('date-utils');
 const app = express()
 app.use(express.json())
 
@@ -27,6 +28,15 @@ let persons = [
 
 app.get('/', (request, response) => {
     response.send('<h1>Hello World!</h1>')
+})
+
+app.get('/info', (request, response) => {
+    const numOfPersons = persons.length
+    let now = new Date();
+    response.send(`
+<p>Phonebook has info for ${numOfPersons} people</p>
+<p>${now}</p>
+`)
 })
 
 app.get('/api/persons', (request, response) => {
