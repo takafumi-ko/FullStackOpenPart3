@@ -55,10 +55,15 @@ app.get('/api/persons/:id', (request, response) => {
 })
 
 app.post('/api/persons', (request, response) => {
-    const person = request.body
+    let person = request.body
+
+    person={...person,id :Math.random()}
     console.log(person)
+    persons = persons.concat(person)
+
     response.json(person)
 })
+
 app.delete('/api/persons/:id',(request,response)=>{
     const id = Number(request.params.id)
 
