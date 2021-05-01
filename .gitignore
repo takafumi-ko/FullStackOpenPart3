@@ -1,3 +1,4 @@
 /node_modules/*
 /.idea/part3.iml
 /.idea/vcs.xml
+.env
