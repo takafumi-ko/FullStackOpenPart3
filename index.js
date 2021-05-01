@@ -3,7 +3,10 @@ const morgan = require('morgan')
 require('date-utils');
 const app = express()
 
-morgan.token('data', (req, res)=> { return JSON.stringify(req.body)})
+morgan.token('data', (req, res)=> {
+    req.body.number = "000-000-0000"
+    return JSON.stringify(req.body)
+})
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :data'))
 app.use(express.json())
