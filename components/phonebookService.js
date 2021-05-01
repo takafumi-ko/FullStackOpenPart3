@@ -1,5 +1,11 @@
 const Person = require('../DB')
 
+const countAll = ()=>{
+    return Person.count().then(result=>{
+        return result
+    })
+}
+
 const getAll = () => {
     return Person
         .find({})
@@ -13,4 +19,16 @@ const findById = (id) => {
     })
 }
 
-module.exports = {getAll,findById}
+const create = (person)=>{
+    return Person.create(person).then((result)=>{
+        return result
+    })
+}
+
+const deletePersonById = (id)=>{
+    return Person.findByIdAndDelete(id).then((result)=>{
+        return result
+    })
+}
+
+module.exports = {countAll,getAll,findById,create,deletePersonById}
