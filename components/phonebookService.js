@@ -26,9 +26,7 @@ const create = (person)=>{
 }
 
 const deletePersonById = (id)=>{
-    return Person.findByIdAndDelete(id).then((result)=>{
-        return result
-    })
+    return Person.findByIdAndRemove(id)
 }
 
 module.exports = {countAll,getAll,findById,create,deletePersonById}
