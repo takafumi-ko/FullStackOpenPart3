@@ -58,27 +58,29 @@ app.get('/api/persons/:id', (request, response,next) => {
     }).catch(error => next(error))
 })
 
-app.post('/api/persons', (request, response) => {
+app.post('/api/persons', (request, response,next) => {
     let personBody = request.body
 
     if (!personBody.number || !personBody.name) {
         response.json({error: "name or number must be not null"})
     }
 
-    // if (persons.find(p => p.name === person.name)) {
-    //     response.json({ error: 'name must be unique' })
-    //     response.status(400).end()
-    // }
-
     const personA = {
         name: personBody.name,
         number: personBody.number
     }
 
-    phonebookService.create(personA).then((result) => {
-        response.json(result).status(201).end()
+    phonebookService.findByNameOneAndUpdate(personA).then((result)=>{
+        if(result) {
+            response.json(result).status(201).end()
+        }else{
+            phonebookService.create(personA).then((result)=>{
+                response.json(result).status(201).end()
+            })
+        }
+    }).catch(error => {
+        next(error)
     })
-
 })
 
 
@@ -86,7 +88,7 @@ app.delete('/api/persons/:id', (request, response,next) => {
     const id = request.params.id
 
     phonebookService.deletePersonById(id).then((result) => {
-        response.json(result).status(204).end()
+        response.status(204).end()
     }).catch(error => {
         next(error)
     })

@@ -1,32 +1,27 @@
 const Person = require('../DB')
 
-const countAll = ()=>{
-    return Person.count().then(result=>{
-        return result
-    })
+const countAll = () => {
+    return Person.count()
 }
 
 const getAll = () => {
-    return Person
-        .find({})
-        .then(persons => {
-            return persons
-        })
+    return Person.find({})
 }
 const findById = (id) => {
-    return Person.findById(id).then(person => {
-        return person
-    })
+    return Person.findById(id)
 }
 
-const create = (person)=>{
-    return Person.create(person).then((result)=>{
-        return result
-    })
+const findByNameOneAndUpdate = (person) => {
+    return Person.findOneAndUpdate({name: person.name}, person, { new: true })
 }
 
-const deletePersonById = (id)=>{
+const create = (person) => {
+    return Person.create(person)
+}
+
+const deletePersonById = (id) => {
     return Person.findByIdAndRemove(id)
 }
 
-module.exports = {countAll,getAll,findById,create,deletePersonById}
+
+module.exports = {countAll, getAll, findById, create, findByNameOneAndUpdate,deletePersonById}
