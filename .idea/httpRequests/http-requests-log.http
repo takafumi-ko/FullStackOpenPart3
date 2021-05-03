@@ -1,46 +1,482 @@
-GET http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hogehudgaaa",
+  "number": "00000"
+}
+
+<> 2021-05-03T171048.400.json
 
 ###
 
-DELETE http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hogehugaaa",
+  "number": "00000000"
+}
+
+<> 2021-05-03T171039.200.json
 
 ###
 
-GET http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
 
-<> 2021-04-14T010558.200.json
+{
+  "name": "hogehugaaa",
+  "number": "00000000"
+}
 
-###
-
-GET http://localhost:3001/api/persons/4
-
-<> 2021-04-14T010519.200.json
-
-###
-
-DELETE http://localhost:3001/api/persons/4
+<> 2021-05-03T170748.400.json
 
 ###
 
-DELETE http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hogehuga",
+  "number": "888"
+}
+
+<> 2021-05-03T170733.400.json
 
 ###
 
-GET http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
 
-<> 2021-04-14T010343.200.json
+{
+  "name": "hgfdsadfs",
+  "number": "888"
+}
 
-###
-
-DELETE http://localhost:3001/api/persons/4
-
-###
-
-DELETE http://localhost:3001/api/persons/4
+<> 2021-05-03T170552.400.json
 
 ###
 
-DELETE http://localhost:3001/api/persons/4
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hgfdsafs",
+  "number": "888"
+}
+
+<> 2021-05-03T170543.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hgfdsafs",
+  "number": "888"
+}
+
+<> 2021-05-03T170320.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hg",
+  "number": "888"
+}
+
+<> 2021-05-03T170308.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hha33f",
+  "number": "aasa"
+}
+
+<> 2021-05-03T170241.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hha33f",
+  "number": "aasa"
+}
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hha33",
+  "number": "aasa"
+}
+
+<> 2021-05-03T165501.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hha3",
+  "number": "aasa"
+}
+
+<> 2021-05-03T165438.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hh3",
+  "number": "aaa"
+}
+
+<> 2021-05-03T165414.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hh",
+  "number": "aaa"
+}
+
+<> 2021-05-03T165237.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hj",
+  "number": "aaa"
+}
+
+<> 2021-05-03T165227.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hj",
+  "number": "020110"
+}
+
+<> 2021-05-03T165202.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "h",
+  "number": "020110"
+}
+
+<> 2021-05-03T164211.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "ho",
+  "number": "02011000000"
+}
+
+<> 2021-05-03T164126.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge",
+  "number": "00000000"
+}
+
+<> 2021-05-03T163740.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge",
+  "number": "00000000"
+}
+
+<> 2021-05-03T163734.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2021-05-03T161957.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+###
+
+GET http://localhost:3001/api/persons/someInvalidId
+
+<> 2021-05-03T160115.400.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge4",
+  "number": "02011000000"
+}
+
+<> 2021-05-03T154649.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "02011000000"
+}
+
+<> 2021-05-03T154622.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "0011000000"
+}
+
+<> 2021-05-03T154539.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "00000000"
+}
+
+<> 2021-05-03T154154.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "00000000"
+}
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153942.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge3",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153853.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge2",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153817.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge2",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153151.500.html
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge2",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153109.500.html
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge2",
+  "number": "00000000"
+}
+
+<> 2021-05-03T153019.500.html
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150809.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150641.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150602.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150547.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150316.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150309.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150231.200.json
+
+###
+
+GET http://localhost:3001/api/persons/608d95f08c1399d343458be4
+
+<> 2021-05-03T150223.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2021-05-03T150212.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+###
+
+DELETE http://localhost:3001/api/persons/608d92a2403e92d2399a6383
+
+<> 2021-05-03T145626.200.json
+
+###
+
+GET http://localhost:3001/api/persons/608d92a2403e92d2399a6383
+
+###
+
+DELETE http://localhost:3001/api/persons/608d92a2403e92d2399a6383
+
+<> 2021-05-03T144506.200.json
+
+###
+
+GET http://localhost:3001/info
+
+<> 2021-05-02T025258.200.html
+
+###
+
+DELETE http://localhost:3001/api/persons/608d92a2403e92d2399a6383
+
+<> 2021-05-02T024746.200.json
+
+###
+
+POST http://localhost:3001/api/persons/
+Content-Type: application/json
+
+{
+  "name": "hoge",
+  "number": "00000000"
+}
+
+<> 2021-05-02T024050.200.json
 
 ###
 
