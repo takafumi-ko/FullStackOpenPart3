@@ -12,7 +12,7 @@ const findById = (id) => {
 }
 
 const findByNameOneAndUpdate = (person) => {
-    return Person.findOneAndUpdate({name: person.name}, person, { new: true })
+    return Person.findOneAndUpdate({ name: person.name }, person, { new: true })
 }
 
 const create = (person) => {
@@ -24,4 +24,4 @@ const deletePersonById = (id) => {
 }
 
 
-module.exports = {countAll, getAll, findById, create, findByNameOneAndUpdate,deletePersonById}
+module.exports = { countAll, getAll, findById, create, findByNameOneAndUpdate,deletePersonById }

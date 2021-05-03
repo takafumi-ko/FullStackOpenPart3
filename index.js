@@ -2,10 +2,9 @@ require('dotenv').config()
 
 const express = require('express')
 const morgan = require('morgan')
-require('date-utils');
+require('date-utils')
 const app = express()
 const phonebookService = require('./components/phonebookService')
-
 
 const requestLogger = (request, response, next) => {
     console.log('Method:', request.method)
@@ -16,9 +15,9 @@ const requestLogger = (request, response, next) => {
 }
 app.use(requestLogger)
 
-morgan.token('data', (req, res) => {
-    if (req.method === "POST") {
-        req.body.number = "000-000-0000"
+morgan.token('data', (req) => {
+    if (req.method === 'POST') {
+        req.body.number = '000-000-0000'
         return JSON.stringify(req.body)
     }
     return null
@@ -32,7 +31,7 @@ app.get('/', (request, response) => {
 })
 
 app.get('/info', (request, response) => {
-    let now = new Date();
+    let now = new Date()
     phonebookService.countAll().then((result) => {
         response.send(`
 <p>Phonebook has info for ${result} people</p>
@@ -62,7 +61,7 @@ app.post('/api/persons', (request, response, next) => {
     let personBody = request.body
 
     if (!personBody.number || !personBody.name) {
-        response.json({error: "name or number must be not null"})
+        response.json({ error: 'name or number must be not null' })
     }
 
     const personA = {
@@ -81,7 +80,7 @@ app.post('/api/persons', (request, response, next) => {
 app.delete('/api/persons/:id', (request, response, next) => {
     const id = request.params.id
 
-    phonebookService.deletePersonById(id).then((result) => {
+    phonebookService.deletePersonById(id).then(() => {
         response.status(204).end()
     }).catch(error => {
         next(error)
@@ -89,7 +88,7 @@ app.delete('/api/persons/:id', (request, response, next) => {
 })
 
 const unknownEndpoint = (request, response) => {
-    response.status(404).send({error: 'unknown endpoint'})
+    response.status(404).send({ error: 'unknown endpoint' })
 }
 
 // handler of requests with unknown endpoint
@@ -99,9 +98,9 @@ const errorHandler = (error, request, response, next) => {
     console.error(error.message)
 
     if (error.name === 'CastError') {
-        return response.status(400).send({error: 'malformatted id'})
+        return response.status(400).send({ error: 'malformatted id' })
     } else if (error.name === 'ValidationError') {
-        return response.status(400).json({error: error.message})
+        return response.status(400).json({ error: error.message })
     }
 
     next(error)
